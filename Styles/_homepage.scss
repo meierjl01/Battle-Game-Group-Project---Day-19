@@ -1,13 +1,41 @@
-main{
+.home-background{
   @include outer-container;
-  background:black;
+background-color:black;
+  background:url('pics/The_simpsons_tv.png') no-repeat;
+  background-size:cover;
+}
+html{
+  height:100%;
 }
 
+.home-header{
+  text-align:center;
+  margin-top:17rem;
+  margin-right:6rem;
+}
+.home{
+  margin-left:10rem;
+  margin-right:19rem;
+}
 .character{
 @include span-columns(4);
-color:white;
+border-radius:10px;
+padding-top:1rem;
+padding-bottom:1rem;
+border:2px solid black;
+&:hover{
+  background:black;
+}
+&:hover p{
+  color:white;
+  display:block;
+}
   img{
     width:200px;
     height:200px;
+  }
+    p{
+      display:none;
+
   }
 }
