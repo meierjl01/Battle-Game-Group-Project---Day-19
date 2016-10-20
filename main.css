@@ -28,4 +28,26 @@ main {
     main .compChar:last-child {
       margin-right: 0; }
 
+main {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background: black; }
+  main::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.character {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  color: white; }
+  .character:last-child {
+    margin-right: 0; }
+  .character img {
+    width: 200px;
+    height: 200px; }
+
 /*# sourceMappingURL=main.css.map */

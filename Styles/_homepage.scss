@@ -1,0 +1,13 @@
+main{
+  @include outer-container;
+  background:black;
+}
+
+.character{
+@include span-columns(4);
+color:white;
+  img{
+    width:200px;
+    height:200px;
+  }
+}
