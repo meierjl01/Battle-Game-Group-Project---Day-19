@@ -1,0 +1,11 @@
+main {
+  @include outer-container;
+  text-align: center;
+  
+.userChar  {
+    @include span-columns(1 of 2);
+  }
+  .compChar {
+    @include span-columns(1 of 2);
+  }
+}
