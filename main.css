@@ -28,26 +28,53 @@ main {
     main .compChar:last-child {
       margin-right: 0; }
 
-main {
+.home-background {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  background: black; }
-  main::after {
+  background-color: black;
+  background: url("pics/The_simpsons_tv.png") no-repeat;
+  background-size: cover; }
+  .home-background::after {
     clear: both;
     content: "";
     display: block; }
+
+html {
+  height: 100%; }
+
+.home-header {
+  text-align: center;
+  margin-top: 17rem;
+  margin-right: 6rem; }
+
+.home {
+  margin-left: 10rem;
+  margin-right: 19rem; }
 
 .character {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  color: white; }
+  border-radius: 10px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: 2px solid black; }
   .character:last-child {
     margin-right: 0; }
+  .character:hover {
+    background: black; }
+  .character:hover p {
+    color: white;
+    display: block; }
   .character img {
     width: 200px;
     height: 200px; }
+  .character p {
+    display: none; }
+
+.game-over-header {
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
