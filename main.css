@@ -1,3 +1,31 @@
+html {
+  box-sizing: border-box; }
 
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+main {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  main::after {
+    clear: both;
+    content: "";
+    display: block; }
+  main .userChar {
+    float: left;
+    display: block;
+    margin-right: 16.03631%;
+    width: 41.98184%; }
+    main .userChar:last-child {
+      margin-right: 0; }
+  main .compChar {
+    float: left;
+    display: block;
+    margin-right: 16.03631%;
+    width: 41.98184%; }
+    main .compChar:last-child {
+      margin-right: 0; }
 
 /*# sourceMappingURL=main.css.map */
