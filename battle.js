@@ -22,7 +22,7 @@ function battleRender (character) {
 '<h2>Homer</h2>'+
 '<img src="pics/homer.png"/>'+
 '</div>');
-main.append(userDiv, compDiv);
+screenDiv.append(userDiv, compDiv);
 }
 // battleRender();
 console.log('your linked up!');
