@@ -2,9 +2,8 @@ var main = $('main');
 var header = $('header');
 var screenDiv = $('.screen');
 function battleRender (character) {
-  main.empty();
-  header.empty();
   screenDiv.empty();
+  console.log(character);
   //change based on character user selected
   var userDiv = $('<div class="userChar">'+
 //health will change when opponent attacks
@@ -14,7 +13,7 @@ function battleRender (character) {
 '<button class="attack">Choke</button>'+
 '<button class="block">Block</button>'+
 //change innerText for super based on character
-'<button class="super">'+character.super+'</button></div>');
+'<button class="super">'+character.special+'</button></div>');
 
   var compDiv = $('<div class="compChar">'+
   //health change when user attacks
