@@ -14,6 +14,7 @@ var Homer= new Character('Homer');
 
 Character.prototype.specAttack = function(name) {
   var special=Math.floor(Math.random()*4)+1;
+  console.log(special);
 name.health = name.health-special;
 
 };
