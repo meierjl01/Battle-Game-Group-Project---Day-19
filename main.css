@@ -28,26 +28,71 @@ main {
     main .compChar:last-child {
       margin-right: 0; }
 
-main {
+.home-background {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  background: black; }
-  main::after {
+  background-color: black;
+  background: url("pics/The_simpsons_tv.png") no-repeat;
+  background-size: cover; }
+  .home-background::after {
     clear: both;
     content: "";
     display: block; }
+
+html {
+  height: 100%; }
+
+.home-header {
+  text-align: center;
+  margin-top: 17rem;
+  margin-right: 6rem; }
+
+.home {
+  margin-left: 4rem;
+  margin-right: 4rem; }
+
+.home-title {
+  color: white;
+  padding-top: 8rem;
+  padding-left: 5rem; }
+
+h2 {
+  color: white;
+  padding-left: 3rem; }
 
 .character {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  color: white; }
+  border-radius: 10px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: transform, 0.3s; }
   .character:last-child {
     margin-right: 0; }
+  .character:hover {
+    transform: scale(1.1); }
+  .character:hover p {
+    color: white;
+    display: block; }
   .character img {
     width: 200px;
     height: 200px; }
+  .character p {
+    display: none; }
+
+.screen {
+  width: 81%;
+  height: 43rem;
+  background: url(pics/broketv.gif) no-repeat;
+  background-size: 100%;
+  margin-top: -9.5rem;
+  margin-left: 3rem;
+  border-radius: 189px; }
+
+.game-over-header {
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
