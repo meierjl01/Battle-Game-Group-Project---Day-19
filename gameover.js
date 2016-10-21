@@ -23,4 +23,4 @@ function renderGameOver() {
     }, 10000);
 }
 
-renderGameOver();
+// renderGameOver();

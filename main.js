@@ -32,7 +32,7 @@ function hashChangeEvent(e){
     console.log("something");
   } else if(siteLocation==='#battle'){
     console.log("battle");
-  }else if(siteLocatin==='#gameover'){
+  }else if(siteLocation==='#gameover'){
     console.log("yousuck!");
   }
 }
