@@ -12,60 +12,17 @@ var Homer= new Character('Homer');
 
 
 
-Character.prototype.specialPower = function(user, boss) {
-  $('h3').empty();
-  boss.health = boss.health-2;
-  var newHealth = $('<h3>Health'+boss.health+'</h3>');
-  $('.compChar').prepend(newHealth);
-$('.versusText').hide();
-var attackGif = $('<img src="'+user.specialGif+'"/>');
-console.log($('.versus'));
-$('.versus').append(attackGif);
-  setTimeout(function() {
-$('.versusText').show();
-attackGif.hide();
-  }, 4000);
-  $('.attack').prop('disabled', true);
-  $('.block').prop('disabled', true);
-$('.special').prop('disabled', true);
-// homerPick();
-  setTimeout(function() {
-    $('.attack').prop('disabled', false);
-    $('.block').prop('disabled', false);
-  }, 8000);
+Character.prototype.specAttack = function(name) {
+name.health = name.health-4;
+
 };
 
-Character.prototype.attack = function(user, boss) {
-  $('h3').empty();
-  boss.health = boss.health-1;
-  var newHealth = $('<h3>Health'+boss.health+'</h3>');
-  $('.compChar').prepend(newHealth);
-$('.versusText').hide();
-var attackGif = $('<img src="'+user.attackGif+'"/>');
-console.log($('.versus'));
-$('.versus').append(attackGif);
-  setTimeout(function() {
-$('.versusText').show();
-attackGif.hide();
-  }, 4000);
-  $('.attack').prop('disabled', true);
-  $('.block').prop('disabled', true);
-  $('.special').prop('disabled', true);
-// homerPick();
-  setTimeout(function() {
-    $('.attack').prop('disabled', false);
-    $('.block').prop('disabled', false);
-    $('.special').prop('disabled', false);
-  }, 8000);
+Character.prototype.attack = function(name) {
+  name.health = name.health-3;
 };
-Character.prototype.block = function(user, boss) {
-  $('h3').empty();
-  Homer.health = Homer.health-1;
-  var newHealth = $('<h3>Health'+character.health+'</h3>');
-  $('.compChar').prepend(newHealth);
-  $('.versus').empty();
-  var attackGif = $('<img src="'+Character.attackGif+'"/>');
-  $('.versus').append(attackGif);
+Character.prototype.block = function(name) {
+  var defend=Math.floor(Math.random()*3)+1;
+  name.health=name.health+defend;
 };
 
 //
