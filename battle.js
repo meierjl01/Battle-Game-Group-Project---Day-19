@@ -55,8 +55,10 @@ setTimeout(function() {
 });
 $('.attack').on('click', function(e) {
   Character.prototype.attack(character, Homer);
-  if(character.health<=0 || Homer.health<=0){
-    renderGameOver();
+  if(character.health<=0){
+    renderGameOver(Homer);
+  } else if (Homer.health <=0){
+    renderGameOver(character);
   }
 });
 $('.block').on('click',function(e){
