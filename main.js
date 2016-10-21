@@ -28,11 +28,11 @@ var Homer= new Character('Homer');
 function hashChangeEvent(e){
   var siteLocation=location.hash;
 
-  if(siteLocation===''){
+  if(siteLocation ===''){
     console.log("something");
-  } else if(siteLocation==='#battle'){
+  } else if(siteLocation ==='#battle'){
     console.log("battle");
-  }else if(siteLocation==='#gameover'){
+  }else if(siteLocation ==='#gameover'){
     console.log("yousuck!");
   }
 }
