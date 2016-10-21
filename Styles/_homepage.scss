@@ -14,17 +14,28 @@ html{
   margin-right:6rem;
 }
 .home{
-  margin-left:10rem;
-  margin-right:19rem;
+  margin-left:4rem;
+  margin-right:4rem;
 }
+.home-title{
+  color: white;
+padding-top: 8rem;
+padding-left: 5rem;
+}
+h2{
+  color:white;
+  padding-left:3rem;
+}
+
 .character{
 @include span-columns(4);
 border-radius:10px;
 padding-top:1rem;
 padding-bottom:1rem;
-border:2px solid black;
+transition:(transform, .3s);
 &:hover{
-  background:black;
+  transform:scale(1.1);
+
 }
 &:hover p{
   color:white;
@@ -38,4 +49,13 @@ border:2px solid black;
       display:none;
 
   }
+}
+.screen{
+  width: 82%;
+      height: 49rem;
+      background:url("pics/broketv.gif")no-repeat;
+      background-size:100%;
+      margin-top: -9.5rem;
+      margin-left: 4rem;
+      border-radius: 189px;
 }

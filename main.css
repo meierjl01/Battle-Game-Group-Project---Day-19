@@ -49,8 +49,17 @@ html {
   margin-right: 6rem; }
 
 .home {
-  margin-left: 10rem;
-  margin-right: 19rem; }
+  margin-left: 4rem;
+  margin-right: 4rem; }
+
+.home-title {
+  color: white;
+  padding-top: 8rem;
+  padding-left: 5rem; }
+
+h2 {
+  color: white;
+  padding-left: 3rem; }
 
 .character {
   float: left;
@@ -60,11 +69,11 @@ html {
   border-radius: 10px;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  border: 2px solid black; }
+  transition: transform, 0.3s; }
   .character:last-child {
     margin-right: 0; }
   .character:hover {
-    background: black; }
+    transform: scale(1.1); }
   .character:hover p {
     color: white;
     display: block; }
@@ -73,6 +82,15 @@ html {
     height: 200px; }
   .character p {
     display: none; }
+
+.screen {
+  width: 82%;
+  height: 49rem;
+  background: url("pics/broketv.gif") no-repeat;
+  background-size: 100%;
+  margin-top: -9.5rem;
+  margin-left: 4rem;
+  border-radius: 189px; }
 
 .game-over-header {
   text-align: center; }

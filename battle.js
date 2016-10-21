@@ -19,5 +19,5 @@ function battleRender () {
 '</div>');
 main.append(userDiv, compDiv);
 }
-battleRender();
+// battleRender();
 console.log('your linked up!');
