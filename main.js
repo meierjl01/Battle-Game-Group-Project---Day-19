@@ -5,6 +5,7 @@ function Character(name, special, picture){
   this.special=special;
   this.picture=picture;
 }
+
 var Lisa= new Character('Lisa',"Super SAX", "pics/lisa.png");
 var Bart= new Character('Bart', 'super SKATEBOARD','pics/bart.png');
 var Homer= new Character('Homer');
