@@ -11,13 +11,9 @@ main.append(lisaCharacter,bartCharacter,homerCharacter);
 //add click handlers to each character
 $('.lisa').on('click',function(e){
  battleRender(Lisa);
-   location.hash="#battle";
-   console.log(Lisa);
 });
 $('.bart').on('click',function(e){
   battleRender(Bart);
-  location.hash='#battle';
-  console.log(Bart);
 });
   //when character is clicked others fade away and selected grows
   //boss character and character selected is only in view
