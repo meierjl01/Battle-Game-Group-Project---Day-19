@@ -9,6 +9,7 @@ function renderHomepage(){
 header.append(title);
 main.append(lisaCharacter,bartCharacter,homerCharacter);
 //add click handlers to each character
+
   //when character is clicked others fade away and selected grows
   //boss character and character selected is only in view
   // vs is added and a little loading screen after 5 seconds
