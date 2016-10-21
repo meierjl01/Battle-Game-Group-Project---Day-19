@@ -13,12 +13,14 @@ var Homer= new Character('Homer');
 
 
 Character.prototype.specAttack = function(name) {
-name.health = name.health-4;
+  var special=Math.floor(Math.random()*4)+1;
+name.health = name.health-special;
 
 };
 
 Character.prototype.attack = function(name) {
-  name.health = name.health-3;
+  var attack=Math.floor(Math.random()*3)+1;
+  name.health = name.health-attack;
 };
 Character.prototype.block = function(name) {
   var defend=Math.floor(Math.random()*3)+1;
