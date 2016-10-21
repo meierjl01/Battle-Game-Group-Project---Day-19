@@ -6,9 +6,8 @@ location.hash="#gameover";
 
 console.log('hi');
 
-function renderGameOver() {
-    header.empty();
-    main.empty();
+function renderGameOver(character) {
+    $('.screen').empty();
     var head = $('<h1 class="game-over-header">Game Over!</h1>');
     //need to include code that says who won in header also
 
