@@ -1,11 +1,27 @@
-main {
+body {
   @include outer-container;
   text-align: center;
-  
+
 .userChar  {
-    @include span-columns(1 of 2);
+    @include span-columns(1 of 3);
+    margin-top: 8rem;
+    img {
+      height: 200px;
+      width: 200px;
+    }
   }
   .compChar {
-    @include span-columns(1 of 2);
+    @include span-columns(1 of 3);
+    margin-top: 8rem;
+    img {
+      height: 200px;
+      width: 200px;
+    }
+  }
+  .versus {
+    @include span-columns(1 of 3);
+    margin-top: 8rem;
+    color: white;
+    font-size: 20px;
   }
 }

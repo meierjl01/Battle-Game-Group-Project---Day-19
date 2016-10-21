@@ -4,28 +4,46 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-main {
+body {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   text-align: center; }
-  main::after {
+  body::after {
     clear: both;
     content: "";
     display: block; }
-  main .userChar {
+  body .userChar {
     float: left;
     display: block;
-    margin-right: 16.03631%;
-    width: 41.98184%; }
-    main .userChar:last-child {
+    margin-right: 10.1484%;
+    width: 26.56773%;
+    margin-top: 8rem; }
+    body .userChar:last-child {
       margin-right: 0; }
-  main .compChar {
+    body .userChar img {
+      height: 200px;
+      width: 200px; }
+  body .compChar {
     float: left;
     display: block;
-    margin-right: 16.03631%;
-    width: 41.98184%; }
-    main .compChar:last-child {
+    margin-right: 10.1484%;
+    width: 26.56773%;
+    margin-top: 8rem; }
+    body .compChar:last-child {
+      margin-right: 0; }
+    body .compChar img {
+      height: 200px;
+      width: 200px; }
+  body .versus {
+    float: left;
+    display: block;
+    margin-right: 10.1484%;
+    width: 26.56773%;
+    margin-top: 8rem;
+    color: white;
+    font-size: 20px; }
+    body .versus:last-child {
       margin-right: 0; }
 
 .home-background {
@@ -66,7 +84,6 @@ h2 {
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  border-radius: 10px;
   padding-top: 1rem;
   padding-bottom: 1rem;
   transition: transform, 0.3s; }
@@ -81,6 +98,24 @@ h2 {
     width: 200px;
     height: 200px; }
   .character p {
+    display: none; }
+
+.computer {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  .computer:last-child {
+    margin-right: 0; }
+  .computer:hover p {
+    color: white;
+    display: block; }
+  .computer img {
+    width: 200px;
+    height: 200px; }
+  .computer p {
     display: none; }
 
 .screen {
