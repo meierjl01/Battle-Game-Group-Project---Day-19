@@ -1,8 +1,9 @@
 var header = $('header');
 var main = $('main');
+var screenDiv = $('.screen');
 
 //locationhash will actually go at the bottom of the battle page's function
-location.hash="#gameover";
+location.hash = "#gameover";
 
 console.log('hi');
 
