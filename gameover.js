@@ -1,26 +1,14 @@
-var header = $('header');
-var main = $('main');
 var screenDiv = $('.screen');
 
-//locationhash will actually go at the bottom of the battle page's function
-location.hash = "#gameover";
+function renderGameOver(name) {
+    screenDiv.empty();
+    var header = $('<h1 class="game-over-header">' + name.name + ' wins!</h1>');
+    var winner = $('<div class ="game-over-gif"><img src ='+ name.winGif +' /></div>');
 
-console.log('hi');
-
-function renderGameOver(character) {
-    $('.screen').empty();
-    var head = $('<h1 class="game-over-header">Game Over!</h1>');
-    //need to include code that says who won in header also
-
-    //include gif or pic (both?) for each possible winner
-    var winner = $('<div class ="game-over-gif"><img src="pics/atleastyoutried.gif" /></div>');
-
-    header.append(head);
-    main.append(winner);
+    screenDiv.prepend(head);
+    screenDiv.append(winner);
 
     setTimeout(function() {
-        location.hash = '';
+      renderHomepage();
     }, 10000);
 }
-
-// renderGameOver();

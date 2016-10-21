@@ -44,24 +44,18 @@ Character.prototype.block = function(name) {
 
 
 
-
-
-
-
-
-
-
-function hashChangeEvent(e){
-  var siteLocation=location.hash;
-
-  if(siteLocation ===''){
-    console.log("something");
-  } else if(siteLocation ==='#battle'){
-    console.log("battle");
-  }else if(siteLocation ==='#gameover'){
-    console.log("yousuck!");
-  }
-}
-
-$(window).on('hashchange',hashChangeEvent);
-hashChangeEvent();
+// function hashChangeEvent(e){
+//   var siteLocation=location.hash;
+//
+//   if(siteLocation ===''){
+//     console.log("something");
+//     renderHomePage();
+//   } else if(siteLocation ==='#battle'){
+//     battleRender(character);
+//   }else if(siteLocation ==='#gameover'){
+//     renderGameOver(character);
+//   }
+// }
+//
+// $(window).on('hashchange',hashChangeEvent);
+// hashChangeEvent();
