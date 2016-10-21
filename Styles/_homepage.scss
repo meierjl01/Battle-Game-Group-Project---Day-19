@@ -29,7 +29,6 @@ h2{
 
 .character{
 @include span-columns(4);
-border-radius:10px;
 padding-top:1rem;
 padding-bottom:1rem;
 transition:(transform, .3s);
@@ -49,6 +48,23 @@ transition:(transform, .3s);
       display:none;
 
   }
+}
+.computer{
+  @include span-columns(4);
+  padding-top:1rem;
+  padding-bottom:1rem;
+  &:hover p{
+    color:white;
+    display:block;
+  }
+    img{
+      width:200px;
+      height:200px;
+    }
+      p{
+        display:none;
+
+    }
 }
 .screen{
   width: 81%;
