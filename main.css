@@ -4,12 +4,14 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+body {
+  background-size: cover;
+  background-repeat: no-repeat; }
+
 .home-background {
   max-width: 1200px;
   margin-left: auto;
-  margin-right: auto;
-  background: url("pics/The_simpsons_tv.png") no-repeat;
-  background-size: cover; }
+  margin-right: auto; }
   .home-background::after {
     clear: both;
     content: "";
@@ -18,16 +20,15 @@ html {
 html {
   height: 100%; }
 
-.home-header {
+.home-title {
   padding-top: 7rem;
-  color: white; }
+  color: white;
+  margin-top: 12rem;
+  font-size: 53px; }
 
 h2 {
   color: white;
   padding-left: 3rem; }
-
-h1 {
-  color: white; }
 
 .character {
   float: left;
@@ -69,12 +70,12 @@ h1 {
     display: none; }
 
 .screen {
-  width: 79%;
-  height: 45rem;
+  width: 116%;
+  height: 65rem;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 6.5rem;
-  margin-left: 3rem;
+  margin-top: 10.5rem;
+  margin-left: -13rem;
   border-radius: 189px; }
 
 body {
@@ -92,7 +93,8 @@ body {
     margin-right: 10.1484%;
     width: 26.56773%;
     margin-top: 8rem;
-    margin-right: 3rem; }
+    margin-right: 3rem;
+    background-color: rgba(0, 0, 0, 0.7); }
     body .userChar:last-child {
       margin-right: 0; }
     body .userChar img {
@@ -103,7 +105,9 @@ body {
     display: block;
     margin-right: 10.1484%;
     width: 26.56773%;
-    margin-top: 8rem; }
+    margin-top: 8rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center; }
     body .compChar:last-child {
       margin-right: 0; }
     body .compChar img {
@@ -115,9 +119,13 @@ body {
     margin-right: 10.1484%;
     width: 26.56773%;
     margin-top: 14rem;
-    color: white; }
+    color: white;
+    text-align: center; }
     body .versus:last-child {
       margin-right: 0; }
+    body .versus img {
+      width: 300px;
+      height: 300px; }
 
 .specialGif {
   width: 122%; }

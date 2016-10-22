@@ -6,7 +6,7 @@ function battleRender(character) {
   character.health = 20;
   Homer.health=20;
     screenDiv.empty();
-    screenDiv.css('background-image', 'url(pics/springfield.jpg)');
+    body.css('background-image', 'url(pics/springfield.jpg)');
     //change based on character user selected
     var userDiv = $('<div class="userChar">' +
         //health will change when opponent attacks
@@ -75,7 +75,6 @@ function battleRender(character) {
 
         setTimeout(function() {
           $('.special').prop('disabled', false);
-        }, 50000);
         }, 30000);
         if (character.health <= 0) {
             renderGameOver(Homer);
@@ -83,7 +82,7 @@ function battleRender(character) {
             renderGameOver(character);
         }
 
-    }
+    });
     $('.attack').on('click', function(e) {
       var VS = $('.vspic');
       var bossHealth = $('.bossHealth');
