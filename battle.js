@@ -72,7 +72,7 @@ function battleRender(character) {
           $('.special').prop('disabled', false);
         }, 50000);
 
-        if (Lisa.health <= 0) {
+        if (character.health <= 0) {
             renderGameOver(Homer);
         } else if (Homer.health <= 0) {
             renderGameOver(character);
