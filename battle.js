@@ -3,7 +3,7 @@ var header = $('header');
 var screenDiv = $('.screen');
 
 function battleRender(character) {
-  character.health = 1;
+  character.health = 20;
   Homer.health=20;
     screenDiv.empty();
     screenDiv.css('background-image', 'url(pics/springfield.jpg)');
@@ -50,6 +50,11 @@ function battleRender(character) {
         setTimeout(function() {
         $('.attack').prop('disabled', false);
             $('.heal').prop('disabled', false);
+            if (character.health <= 0) {
+                renderGameOver(Homer);
+            } else if (Homer.health <= 0) {
+                renderGameOver(character);
+            }
 }, 5000);
       setTimeout(function(){
         specialGif.hide();
@@ -71,13 +76,14 @@ function battleRender(character) {
         setTimeout(function() {
           $('.special').prop('disabled', false);
         }, 50000);
-
+        }, 30000);
         if (character.health <= 0) {
             renderGameOver(Homer);
         } else if (Homer.health <= 0) {
             renderGameOver(character);
         }
-    });
+
+    }
     $('.attack').on('click', function(e) {
       var VS = $('.vspic');
       var bossHealth = $('.bossHealth');
@@ -86,7 +92,6 @@ function battleRender(character) {
       var bossGif = $('<img class="bossGif" src="' + Homer.attackGif + '">');
       var attackname = $('<p class="attack-name">You attacked Homer</p>');
       var bossattackName = $('<p>Homer attacked you</p>');
-      //character special attack
       character.attack(Homer);
       bossHealth.text("health: " + Homer.health);
       VS.hide();
@@ -94,10 +99,14 @@ function battleRender(character) {
       versusDiv.prepend(attackname);
       $('.attack').prop('disabled', true);
       $('.heal').prop('disabled', true);
-      $('.special').prop('disabled', true);
       setTimeout(function() {
       $('.attack').prop('disabled', false);
           $('.heal').prop('disabled', false);
+          if (character.health <= 0) {
+              renderGameOver(Homer);
+          } else if (Homer.health <= 0) {
+              renderGameOver(character);
+          }
 }, 5000);
     setTimeout(function(){
       attackGif.hide();
@@ -115,12 +124,12 @@ function battleRender(character) {
           bossGif.hide();
           bossattackName.hide();
       }, 5000);
+      if (character.health <= 0) {
+          renderGameOver(Homer);
+      } else if (Homer.health <= 0) {
+          renderGameOver(character);
+      }
 
-        if (character.health <= 0) {
-            renderGameOver(character);
-        } else if (Homer.health <= 0) {
-            renderGameOver(character);
-        }
     });
     $('.heal').on('click', function(e) {
         character.heal(character);
@@ -155,17 +164,13 @@ function battleRender(character) {
             bossGif.hide();
         }, 5000);
 
-          if (character.health <= 0) {
-              renderGameOver(character);
-          } else if (Homer.health <= 0) {
-              renderGameOver(character);
-          }
           setTimeout(function(){
           $('.heal').prop('disabled', false);
         }, 30000);
     });
 
 }
+
 
 
 // battleRender();
