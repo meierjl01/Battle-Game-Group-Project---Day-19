@@ -5,6 +5,7 @@ body {
 .userChar  {
     @include span-columns(1 of 3);
     margin-top: 8rem;
+    margin-right:3rem;
     img {
       height: 200px;
       width: 200px;
@@ -20,8 +21,24 @@ body {
   }
   .versus {
     @include span-columns(1 of 3);
-    margin-top: 8rem;
-    color: white;
-    font-size: 20px;
+    margin-top: 14rem;
+    color:white;
+
   }
+}
+.specialGif{
+  width:122%;
+}
+h3{
+  color:red;
+}
+h5{
+  color: red;
+    font-size: 2rem;
+    position: absolute;
+    top: 6rem;
+    left: 23rem;
+    border: 2px solid white;
+    background: white;
+    border-radius: 7px;
 }
