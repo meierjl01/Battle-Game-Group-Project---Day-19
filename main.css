@@ -126,7 +126,7 @@ h2 {
 .screen {
   width: 79%;
   height: 45rem;
-  background: url(pics/broketv.gif) no-repeat;
+  background-repeat: no-repeat;
   background-size: 100%;
   margin-top: 6.5rem;
   margin-left: 3rem;
