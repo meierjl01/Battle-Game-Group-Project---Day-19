@@ -6,7 +6,7 @@ function battleRender(character) {
   character.health = 20;
   Homer.health=20;
     screenDiv.empty();
-    screenDiv.css('background-image', 'url(pics/springfield.jpg)');
+    body.css('background-image', 'url(pics/springfield.jpg)');
     //change based on character user selected
     var userDiv = $('<div class="userChar">' +
         //health will change when opponent attacks
