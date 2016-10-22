@@ -36,6 +36,7 @@ name.health = name.health-special;
      regularHit.hide();
    },2000);
  }
+
 };
 Character.prototype.attack = function(name) {
   var attack=Math.floor(Math.random()*3)+1;
@@ -54,6 +55,7 @@ Character.prototype.attack = function(name) {
      regularHit.hide();
    },2000);
  }
+
 };
 Character.prototype.heal = function(name) {
   var heal=Math.floor(Math.random()*2)+1;
