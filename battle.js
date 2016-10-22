@@ -10,7 +10,7 @@ function battleRender (character) {
 '<h2>'+character.name+'</h2>'+
 '<img class = "char-pic" src="'+character.picture+'"/>'+
 '<button class="attack">Attack</button>'+
-'<button class="block">Block</button>'+
+'<button class="heal">Heal</button>'+
 //change innerText for super based on character
 '<button class="special">'+character.special+'</button></div>');
 var versusDiv = $('<div class="versus"><h6 class="versusText">VERSUS</h6></div>');
@@ -26,32 +26,48 @@ screenDiv.append(userDiv,versusDiv, compDiv);
 
 
 
-
-
-
 $('.special').on('click', function(e) {
+  var VS=$('.versusText');
+  var bossHealth=$('.bossHealth');
+  var characterHealth=$('.charHealth');
+  var specialGif = $('<img class="specialGif" src="'+character.specialGif+'"/>');
+ var bossGif=$('<img class="bossGif" src="'+Homer.specialGif+'">');
+ var specialAttackname=$('<p class="attack-name">You attacked Homer with a '+character.special+'</p>');
+ var bossSpecialAttackName=$('<p>Homer attacked you with a '+Homer.special+'</p>');
   character.specAttack(Homer);
-  $('.bossHealth').text("health: "+Homer.health);
-$('.versusText').hide();
-var attackGif = $('<img src="'+character.specialGif+'"/>');
-$('.versus').append(attackGif);
-  setTimeout(function() {
-    $('.attack').prop('disabled', false);
-    $('.block').prop('disabled', false);
-$('.versusText').show();
-attackGif.hide();
-  }, 4000);
+  bossHealth.text("health: "+Homer.health);
+
+versusDiv.append(specialGif);
+versusDiv.append(specialAttackname);
+ setTimeout(function() {
+$('.attack').prop('disabled', false);
+$('.block').prop('disabled', false);
+specialGif.hide();
+specialAttackname.hide();
+}, 2000);
   $('.attack').prop('disabled', true);
   $('.block').prop('disabled', true);
 $('.special').prop('disabled', true);
 
-setTimeout(function() {
+setTimeout(function(){
+  versusDiv.append(bossGif);
+  versusDiv.append(bossSpecialAttackName);
   Homer.specAttack(character);
-  $('.charHealth').text("health: "+character.health);
-  $('.versusText').hide();
-  var attackGif = $('<img src="'+character.specialGif+'"/>');
-  $('.versus').append(attackGif);
-  }, 4000);
+  characterHealth.text("health: "+character.health);
+
+},3000);
+setTimeout(function(){
+  bossGif.hide();
+  bossSpecialAttackName.hide();
+},5000);
+
+
+
+  if(character.health<=0){
+    renderGameOver(Homer);
+  } else if (Homer.health <=0){
+    renderGameOver(character);
+  }
 });
 $('.attack').on('click', function(e) {
   Character.prototype.attack(character, Homer);
