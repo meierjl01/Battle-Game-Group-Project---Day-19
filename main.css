@@ -18,7 +18,8 @@ body {
     display: block;
     margin-right: 10.1484%;
     width: 26.56773%;
-    margin-top: 8rem; }
+    margin-top: 8rem;
+    margin-right: 3rem; }
     body .userChar:last-child {
       margin-right: 0; }
     body .userChar img {
@@ -40,17 +41,31 @@ body {
     display: block;
     margin-right: 10.1484%;
     width: 26.56773%;
-    margin-top: 8rem;
-    color: white;
-    font-size: 20px; }
+    margin-top: 14rem;
+    color: white; }
     body .versus:last-child {
       margin-right: 0; }
+
+.specialGif {
+  width: 122%; }
+
+h3 {
+  color: red; }
+
+h5 {
+  color: red;
+  font-size: 2rem;
+  position: absolute;
+  top: 6rem;
+  left: 23rem;
+  border: 2px solid white;
+  background: white;
+  border-radius: 7px; }
 
 .home-background {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  background-color: black;
   background: url("pics/The_simpsons_tv.png") no-repeat;
   background-size: cover; }
   .home-background::after {
@@ -62,18 +77,8 @@ html {
   height: 100%; }
 
 .home-header {
-  text-align: center;
-  margin-top: 17rem;
-  margin-right: 6rem; }
-
-.home {
-  margin-left: 4rem;
-  margin-right: 4rem; }
-
-.home-title {
-  color: white;
-  padding-top: 8rem;
-  padding-left: 5rem; }
+  padding-top: 7rem;
+  color: white; }
 
 h2 {
   color: white;
@@ -119,11 +124,11 @@ h2 {
     display: none; }
 
 .screen {
-  width: 81%;
-  height: 43rem;
-  background: url(pics/broketv.gif) no-repeat;
+  width: 79%;
+  height: 45rem;
+  background-repeat: no-repeat;
   background-size: 100%;
-  margin-top: -9.5rem;
+  margin-top: 6.5rem;
   margin-left: 3rem;
   border-radius: 189px; }
 
