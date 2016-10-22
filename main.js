@@ -1,7 +1,7 @@
 function Character(name, special, picture, specialGif,attackGif,blockGif,winGif){
   'use strict';
   this.name=name;
-  this.health=10;
+  this.health=20;
   this.special=special;
   this.picture=picture;
   this.specialGif=specialGif;
@@ -20,6 +20,20 @@ var Homer= new Character('Homer','super Burp',"pics/homer.png","pics/homer.gif",
 
 Character.prototype.specAttack = function(name) {
   var special=Math.floor(Math.random()*4)+1;
+  var criticalHit=$('<h5 class="critcial">WOW CRITICAL HIT!!! -'+special+'</h5>');
+  var regularHit=$('<h5>Hit did '+special+' damage</h5>');
+  var vs=$('.versus');
+  if(special>=3){
+   vs.prepend(criticalHit);
+   setTimeout(function(){
+     criticalHit.hide();
+   },2000);
+ }else if(special<=2){
+   vs.prepend(regularHit);
+   setTimeout(function(){
+     regularHit.hide();
+   },2000);
+ }
   name.health = name.health-special;
 
 };
@@ -28,8 +42,8 @@ Character.prototype.attack = function(name) {
   name.health = name.health-attack;
 };
 Character.prototype.heal = function(name) {
-  var defend=Math.floor(Math.random()*2)+1;
-  name.health=name.health+defend;
+  var heal=Math.floor(Math.random()*2)+1;
+  name.health=name.health+heal;
 };
 
 

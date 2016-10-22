@@ -18,7 +18,8 @@ body {
     display: block;
     margin-right: 10.1484%;
     width: 26.56773%;
-    margin-top: 8rem; }
+    margin-top: 8rem;
+    margin-right: 3rem; }
     body .userChar:last-child {
       margin-right: 0; }
     body .userChar img {
@@ -40,14 +41,26 @@ body {
     display: block;
     margin-right: 10.1484%;
     width: 26.56773%;
-    margin-top: 8rem;
-    color: white;
-    font-size: 20px; }
+    margin-top: 14rem;
+    color: white; }
     body .versus:last-child {
       margin-right: 0; }
 
 .specialGif {
   width: 122%; }
+
+h3 {
+  color: red; }
+
+h5 {
+  color: red;
+  font-size: 2rem;
+  position: absolute;
+  top: 6rem;
+  left: 23rem;
+  border: 2px solid white;
+  background: white;
+  border-radius: 7px; }
 
 .home-background {
   max-width: 1200px;
@@ -70,9 +83,6 @@ html {
 h2 {
   color: white;
   padding-left: 3rem; }
-
-h3 {
-  color: red; }
 
 .character {
   float: left;

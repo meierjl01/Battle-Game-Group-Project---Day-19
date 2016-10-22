@@ -17,9 +17,7 @@ h2{
   color:white;
   padding-left:3rem;
 }
-h3{
-  color:red;
-}
+
 
 .character{
 @include span-columns(4);
