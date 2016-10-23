@@ -52,6 +52,7 @@ function battleRender(character) {
 
         }
         if (Homer.health <= 5) {
+          homerdiv.html(dyingHomer);
         }
         if (character.health <= 0) {
             renderGameOver(Homer);
@@ -103,6 +104,7 @@ function battleRender(character) {
                     }, 3000);
                     //homers Attack
                     setTimeout(function() {
+                        character.specialSound.play();
                         versusDiv.prepend(bossSpecGif);
                         if(bossSpecGif.hide()){
                           bossSpecGif.show();
@@ -144,6 +146,7 @@ function battleRender(character) {
                         //homers Attack
                         setTimeout(function() {
                             versusDiv.prepend(bossGif);
+                            character.attackSound.play();
                             if(bossGif.hide()){
                               bossGif.show();
                             }
@@ -159,7 +162,7 @@ function battleRender(character) {
                     });
 
                     $('.heal').on('click', function(e) {
-
+                        character.healSound.play();
                         Homer.heal(character);
                         characterHealth.text("health: " + character.health);
                         characterHealthMeter.width(11.75 * character.health + 'px');
@@ -182,6 +185,7 @@ function battleRender(character) {
                         //homers heal
                         setTimeout(function() {
                             versusDiv.prepend(bossHealGif);
+                            character.healSound.play();
                             if(bossHealGif.hide()){
                               bossHealGif.show();
                             }
