@@ -104,7 +104,7 @@ function battleRender(character) {
                     }, 3000);
                     //homers Attack
                     setTimeout(function() {
-                        character.specialSound.play();
+                        Homer.specialSound.play();
                         versusDiv.prepend(bossSpecGif);
                         if(bossSpecGif.hide()){
                           bossSpecGif.show();
@@ -136,7 +136,9 @@ function battleRender(character) {
                     }
                     $('.attack').prop('disabled', true);
                     $('.heal').prop('disabled', true);
+                    $('.special').prop('disabled', true);
                     setTimeout(function() {
+                        $('.special').prop('disabled', false);
                         $('.attack').prop('disabled', false);
                         $('.heal').prop('disabled', false);
                     }, 5000);
@@ -146,7 +148,7 @@ function battleRender(character) {
                         //homers Attack
                         setTimeout(function() {
                             versusDiv.prepend(bossGif);
-                            character.attackSound.play();
+                            Homer.attackSound.play();
                             if(bossGif.hide()){
                               bossGif.show();
                             }
@@ -176,6 +178,7 @@ function battleRender(character) {
                         $('.heal').prop('disabled', true);
                         setTimeout(function() {
                             $('.attack').prop('disabled', false);
+                            $('special').prop('disabled', false);
                             checkHealth();
                         }, 5000);
                         setTimeout(function() {
@@ -185,7 +188,7 @@ function battleRender(character) {
                         //homers heal
                         setTimeout(function() {
                             versusDiv.prepend(bossHealGif);
-                            character.healSound.play();
+                            Homer.healSound.play();
                             if(bossHealGif.hide()){
                               bossHealGif.show();
                             }
