@@ -3,14 +3,15 @@ var header = $('header');
 var screenDiv = $('.screen');
 
 function battleRender(character) {
-  character.health = 7;
-  Homer.health=7;
+  character.health = 20;
+  Homer.health=20;
     screenDiv.empty();
     screenDiv.css('background-image', 'url(pics/springfield.jpg)');
     //change based on character user selected
     var userDiv = $('<div class="userChar">' +
         //health will change when opponent attacks
         '<h3 class="charHealth">Health: ' + character.health + '</h3>' +
+        '<div class="health-outline"><div class="character-health-meter"></div></div>'+
         '<h2 class="charactername">' + character.name + '</h2>' +
         '<div class="characterpic"><img class = "char-pic" src="' + character.picture + '"/></div>' +
         '<button class="attack">Attack</button>' +
@@ -20,12 +21,12 @@ function battleRender(character) {
     var compDiv = $('<div class="compChar">' +
         //health change when user attacks
         '<h3 class="bossHealth">Health: ' + Homer.health + '</h3>' +
+        '<div class="health-outline"><div class="boss-health-meter"></div></div>'+
         '<h2 class="charactername">Homer</h2>' +
         '<div class="homerpic"><img class="homer-pic"src="pics/homer.png"/></div>' +
         '</div>');
     screenDiv.append(userDiv, versusDiv, compDiv);
     //fighting stuff
-
 
 
 
@@ -39,9 +40,46 @@ function battleRender(character) {
         var dyingHomer=$('<img src="'+Homer.dyingPic+'"/>');
         var homerdiv=$('.homerpic');
         var characterdiv=$('.characterpic');
+        var characterHealthMeter=$('.character-health-meter');
+        var bossHealthMeter=$('.boss-health-meter');
+        function checkHealth(){
+          if(character.health<=5){
+            characterdiv.html(dyingcharacter);
+
+          }
+          if(Homer.health<=5){
+            homerdiv.html(dyingHomer);
+          }
+          if (character.health <= 0) {
+              renderGameOver(Homer);
+          } if (Homer.health <= 0) {
+              renderGameOver(character);
+          }
+          if(bossHealthMeter.width()>117.5){
+            bossHealthMeter.css('background','green');
+          }
+            if(characterHealthMeter.width()>117.5){
+              characterHealthMeter.css('background','green');
+            }
+          if(bossHealthMeter.width()<=117.5){
+            bossHealthMeter.css('background','yellow');
+          }
+          if(characterHealthMeter.width()<=117.5){
+            characterHealthMeter.css('background','yellow');
+          }
+          if(bossHealthMeter.width()<=47){
+            bossHealthMeter.css('background','red');
+          }
+            if(characterHealthMeter.width()<=47){
+              characterHealthMeter.css('background','red');
+            }
+        }
         //character special attack
         character.specAttack(Homer);
+        bossHealthMeter.width(11.75*Homer.health+'px');
+
         bossHealth.text("health: " + Homer.health);
+        checkHealth();
         VS.hide();
         versusDiv.prepend(specialGif);
         $('.attack').prop('disabled', true);
@@ -50,17 +88,8 @@ function battleRender(character) {
         setTimeout(function() {
         $('.attack').prop('disabled', false);
             $('.heal').prop('disabled', false);
-            if(character.health<=5){
-              characterdiv.html(dyingcharacter);
-            }
-            if(Homer.health<=5){
-              homerdiv.html(dyingHomer);
-            }
-            if (character.health <= 0) {
-                renderGameOver(Homer);
-            } if (Homer.health <= 0) {
-                renderGameOver(character);
-            }
+
+
 }, 5000);
       setTimeout(function(){
         specialGif.hide();
@@ -70,6 +99,8 @@ function battleRender(character) {
             versusDiv.prepend(bossGif);
             Homer.specAttack(character);
             characterHealth.text("health: " + character.health);
+            characterHealthMeter.width(11.75*character.health+'px');
+            checkHealth();
 
         }, 3000);
         setTimeout(function() {
@@ -79,6 +110,7 @@ function battleRender(character) {
         setTimeout(function() {
           $('.special').prop('disabled', false);
         }, 30000);
+
 
     });
     $('.attack').on('click', function(e) {
@@ -91,8 +123,43 @@ function battleRender(character) {
       var dyingHomer=$('<img src="'+Homer.dyingPic+'"/>');
       var homerdiv=$('.homerpic');
       var characterdiv=$('.characterpic');
+      var characterHealthMeter=$('.character-health-meter');
+      var bossHealthMeter=$('.boss-health-meter');
+      function checkHealth(){
+        if(character.health<=5){
+          characterdiv.html(dyingcharacter);
+
+        }
+        if(Homer.health<=5){
+          homerdiv.html(dyingHomer);
+        }
+        if (character.health <= 0) {
+            renderGameOver(Homer);
+        } if (Homer.health <= 0) {
+            renderGameOver(character);
+        }
+        if(bossHealthMeter.width()>117.5){
+          bossHealthMeter.css('background','green');
+        }
+          if(characterHealthMeter.width()>117.5){
+            characterHealthMeter.css('background','green');
+          }
+        if(bossHealthMeter.width()<=117.5){
+          bossHealthMeter.css('background','yellow');
+        }
+        if(characterHealthMeter.width()<=117.5){
+          characterHealthMeter.css('background','yellow');
+        }
+        if(bossHealthMeter.width()<=47){
+          bossHealthMeter.css('background','red');
+        }
+          if(characterHealthMeter.width()<=47){
+            characterHealthMeter.css('background','red');
+          }
+      }
       character.attack(Homer);
       bossHealth.text("health: " + Homer.health);
+      bossHealthMeter.width(11.75*Homer.health+'px');
       VS.hide();
       versusDiv.prepend(attackGif);
       $('.attack').prop('disabled', true);
@@ -100,17 +167,7 @@ function battleRender(character) {
       setTimeout(function() {
       $('.attack').prop('disabled', false);
           $('.heal').prop('disabled', false);
-          if(character.health<=5){
-            characterdiv.html(dyingcharacter);
-          }
-          if(Homer.health<=5){
-            homerdiv.html(dyingHomer);
-          }
-          if (character.health <= 0) {
-              renderGameOver(Homer);
-          } if (Homer.health <= 0) {
-              renderGameOver(character);
-          }
+        checkHealth();
 }, 5000);
     setTimeout(function(){
       attackGif.hide();
@@ -120,15 +177,15 @@ function battleRender(character) {
           versusDiv.prepend(bossGif);
           Homer.attack(character);
           characterHealth.text("health: " + character.health);
+          characterHealthMeter.width(11.75*character.health+'px');
 
       }, 3000);
       setTimeout(function() {
           bossGif.hide();
       }, 5000);
-
+    checkHealth();
     });
     $('.heal').on('click', function(e) {
-        Homer.heal(character);
         var VS = $('.vspic');
         var bossHealth = $('.bossHealth');
         var characterHealth = $('.charHealth');
@@ -140,7 +197,43 @@ function battleRender(character) {
         var characterdiv=$('.characterpic');
         var homerpic=$('<img class="homer-pic"src="pics/homer.png"/>');
         var characterpic=$('<img class = "char-pic" src="' + character.picture + '"/>');
+        var characterHealthMeter=$('.character-health-meter');
+        var bossHealthMeter=$('.boss-health-meter');
+        function checkHealth(){
+          if(character.health<=5){
+            characterdiv.html(dyingcharacter);
+
+          }
+          if(Homer.health<=5){
+            homerdiv.html(dyingHomer);
+          }
+          if (character.health <= 0) {
+              renderGameOver(Homer);
+          } if (Homer.health <= 0) {
+              renderGameOver(character);
+          }
+          if(bossHealthMeter.width()>117.5){
+            bossHealthMeter.css('background','green');
+          }
+            if(characterHealthMeter.width()>117.5){
+              characterHealthMeter.css('background','green');
+            }
+          if(bossHealthMeter.width()<=117.5){
+            bossHealthMeter.css('background','yellow');
+          }
+          if(characterHealthMeter.width()<=117.5){
+            characterHealthMeter.css('background','yellow');
+          }
+          if(bossHealthMeter.width()<=47){
+            bossHealthMeter.css('background','red');
+          }
+            if(characterHealthMeter.width()<=47){
+              characterHealthMeter.css('background','red');
+            }
+        }
+        Homer.heal(character);
         characterHealth.text("health: " + character.health);
+        characterHealthMeter.width(11.75*character.health+'px');
         VS.hide();
         versusDiv.prepend(healGif);
         $('.attack').prop('disabled', true);
@@ -148,13 +241,7 @@ function battleRender(character) {
         $('.heal').prop('disabled', true);
         setTimeout(function() {
         $('.attack').prop('disabled', false);
-        if(character.health>=6){
-          characterdiv.html(characterpic);
-
-        }
-        if(Homer.health>=6){
-          homerdiv.html(homerpic);
-        }
+      checkHealth();
   }, 5000);
       setTimeout(function(){
         healGif.hide();
@@ -164,7 +251,8 @@ function battleRender(character) {
             versusDiv.prepend(bossGif);
             character.heal(Homer);
             bossHealth.text("health: "+Homer.health);
-            characterHealth.text("health: " + character.health);
+            bossHealthMeter.width(11.75*Homer.health+'px');
+
 
         }, 3000);
         setTimeout(function() {
@@ -174,6 +262,7 @@ function battleRender(character) {
           setTimeout(function(){
           $('.heal').prop('disabled', false);
         }, 30000);
+        checkHealth();
     });
 
 }

@@ -115,6 +115,22 @@ body {
     body .compChar img {
       height: 200px;
       width: 200px; }
+  body .health-outline {
+    width: 15rem;
+    margin-left: .4rem;
+    height: 1rem;
+    border: 2px solid white;
+    border-radius: 10px; }
+  body .character-health-meter {
+    width: 235px;
+    height: .8rem;
+    background: green;
+    border-radius: 10px; }
+  body .boss-health-meter {
+    width: 235px;
+    height: .8rem;
+    background: green;
+    border-radius: 10px; }
   body .versus {
     float: left;
     display: block;
