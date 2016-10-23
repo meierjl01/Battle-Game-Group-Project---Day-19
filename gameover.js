@@ -2,7 +2,7 @@ var screenDiv = $('.screen');
 
 function renderGameOver(name) {
     screenDiv.empty();
-    var header = $('<h1 class="game-over-header">' + name.name + ' wins!</h1>');
+    var header = $('<h2 class="game-over-header">' + name.name + ' wins!</h2>');
     var winner = $('<div class ="game-over-gif"><img src ='+ name.winGif +' /></div>');
     var gameover = $('<div class="game-over-image"><img src="pics/gameover.png" /></div>');
     screenDiv.prepend(header);

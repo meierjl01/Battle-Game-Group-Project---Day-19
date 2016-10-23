@@ -1,25 +1,22 @@
 
-.home-background{
+body{
   @include outer-container;
   background:url('pics/The_simpsons_tv.png') no-repeat;
   background-size:cover;
-}
-html{
-  height:100%;
-}
-
-.home-header{
-  padding-top:7rem;
-  color:white;
+    text-align: center;
 }
 
 
+.home-title{
+  padding-top:3rem;
+  width:51%;
+}
+.fight{
+  width:43%;
+}
 h2{
   color:white;
   padding-left:3rem;
-}
-h1{
-  color:white;
 }
 
 .character{
@@ -75,20 +72,32 @@ transition:(transform, .3s);
 //battlepage styles
 body {
   @include outer-container;
-  text-align: center;
+
 
 .userChar  {
     @include span-columns(1 of 3);
-    margin-top: 8rem;
-    margin-right:3rem;
+    background: rgba(0,0,0,.6);
+        padding-bottom: 2rem;
+        margin-left: 1rem;
+        margin-top: 11rem;
+        margin-right:2rem;
+
     img {
       height: 200px;
       width: 200px;
     }
   }
+  .charactername{
+  padding:0;
+  }
+
   .compChar {
     @include span-columns(1 of 3);
-    margin-top: 8rem;
+    background: rgba(0,0,0,.6);
+        padding-bottom: 2rem;
+        margin-top: 11rem;
+        margin-right:4rem;
+        margin-left:2rem;
     img {
       height: 200px;
       width: 200px;
@@ -101,19 +110,42 @@ body {
 
   }
 }
-.specialGif{
-  width:122%;
+.moveGif{
+  width: 22rem;
+  height: 16rem;
 }
 h3{
   color:red;
 }
-h5{
-  color: red;
-    font-size: 2rem;
-    position: absolute;
-    top: 6rem;
-    left: 23rem;
-    border: 2px solid white;
-    background: white;
-    border-radius: 7px;
+.regular{
+      position:absolute;
+      color: red;
+      top:10rem;
+      left:18rem;
+      font-size: 2rem;
+      border: 2px solid white;
+      background: white;
+      border-radius: 7px;
 }
+ .critical{
+     position:absolute;
+     top:10rem;
+     left:10rem;
+     color: red;
+     font-size: 2rem;
+     border: 2px solid white;
+     background: white;
+     border-radius: 7px;
+   }
+
+   .game-over-header{
+     padding-right:3rem;
+     text-align:center;
+     font-size:3rem;
+     display:inline-block;
+     color:white;
+     border:2px solid black;
+     border-radius:10px;
+     background:rgba(0,0,0,.6);
+     margin-top:4rem;
+   }

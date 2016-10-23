@@ -4,30 +4,28 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-.home-background {
+body {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   background: url("pics/The_simpsons_tv.png") no-repeat;
-  background-size: cover; }
-  .home-background::after {
+  background-size: cover;
+  text-align: center; }
+  body::after {
     clear: both;
     content: "";
     display: block; }
 
-html {
-  height: 100%; }
+.home-title {
+  padding-top: 3rem;
+  width: 51%; }
 
-.home-header {
-  padding-top: 7rem;
-  color: white; }
+.fight {
+  width: 43%; }
 
 h2 {
   color: white;
   padding-left: 3rem; }
-
-h1 {
-  color: white; }
 
 .character {
   float: left;
@@ -80,8 +78,7 @@ h1 {
 body {
   max-width: 1200px;
   margin-left: auto;
-  margin-right: auto;
-  text-align: center; }
+  margin-right: auto; }
   body::after {
     clear: both;
     content: "";
@@ -91,19 +88,28 @@ body {
     display: block;
     margin-right: 10.1484%;
     width: 26.56773%;
-    margin-top: 8rem;
-    margin-right: 3rem; }
+    background: rgba(0, 0, 0, 0.6);
+    padding-bottom: 2rem;
+    margin-left: 1rem;
+    margin-top: 11rem;
+    margin-right: 2rem; }
     body .userChar:last-child {
       margin-right: 0; }
     body .userChar img {
       height: 200px;
       width: 200px; }
+  body .charactername {
+    padding: 0; }
   body .compChar {
     float: left;
     display: block;
     margin-right: 10.1484%;
     width: 26.56773%;
-    margin-top: 8rem; }
+    background: rgba(0, 0, 0, 0.6);
+    padding-bottom: 2rem;
+    margin-top: 11rem;
+    margin-right: 4rem;
+    margin-left: 2rem; }
     body .compChar:last-child {
       margin-right: 0; }
     body .compChar img {
@@ -119,21 +125,43 @@ body {
     body .versus:last-child {
       margin-right: 0; }
 
-.specialGif {
-  width: 122%; }
+.moveGif {
+  width: 22rem;
+  height: 16rem; }
 
 h3 {
   color: red; }
 
-h5 {
-  color: red;
-  font-size: 2rem;
+.regular {
   position: absolute;
-  top: 6rem;
-  left: 23rem;
+  color: red;
+  top: 10rem;
+  left: 18rem;
+  font-size: 2rem;
   border: 2px solid white;
   background: white;
   border-radius: 7px; }
+
+.critical {
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+  color: red;
+  font-size: 2rem;
+  border: 2px solid white;
+  background: white;
+  border-radius: 7px; }
+
+.game-over-header {
+  padding-right: 3rem;
+  text-align: center;
+  font-size: 3rem;
+  display: inline-block;
+  color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  margin-top: 4rem; }
 
 .game-over-header {
   text-align: center; }
