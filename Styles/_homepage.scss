@@ -102,6 +102,25 @@ body {
       width: 200px;
     }
   }
+  .health-outline{
+    width: 15rem;
+margin-left: .4rem;
+height: 1rem;
+border: 2px solid white;
+border-radius: 10px;
+  }
+  .character-health-meter{
+    width: 235px;
+    height: .8rem;
+    background: green;
+    border-radius: 10px;
+  }
+  .boss-health-meter{
+    width: 235px;
+    height: .8rem;
+    background: green;
+    border-radius: 10px;  
+  }
   .versus {
     @include span-columns(1 of 3);
     margin-top: 14rem;

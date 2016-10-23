@@ -1,4 +1,4 @@
-function Character(name, special, picture, specialGif,attackGif,healGif, dyingPic,winGif){
+function Character(name, special, picture, specialGif,attackGif,healGif, dyingPic,winGif,attackSound,specialSound,healSound,winSound){
   'use strict';
   this.name=name;
   this.health=20;
@@ -9,12 +9,15 @@ function Character(name, special, picture, specialGif,attackGif,healGif, dyingPi
   this.healGif=healGif;
   this.dyingPic=dyingPic;
   this.winGif=winGif;
+  this.attackSound= new Audio(attackSound);
+  this.specialSound= new Audio(specialSound);
+  this.healSound= new Audio(healSound);
+  this.winSound= new Audio(winSound);
 }
 
 
-var Lisa= new Character('Lisa',"Super SAX", "pics/lisa.png","pics/lisasax.gif","pics/lisaduck.gif","pics/lisaheal.gif","pics/dyinglisa.png","pics/lisa.gif");
-
-var Bart= new Character('Bart', 'super SKATEBOARD','pics/bart.png',"pics/skateboard.gif","pics/barthittinghomer.gif","pics/bartheal.gif","pics/dyingbart.jpg","pics/atleastyoutried.gif");
+var Lisa= new Character('Lisa',"Super SAX", "pics/lisa.png","pics/lisasax.gif","pics/lisaduck.gif","pics/lisaheal.gif","pics/dyinglisa.png","pics/lisa.gif","pics/");
+var Bart= new Character('Bart', 'super SKATEBOARD','pics/bart.png',"pics/skateboard.gif","pics/barthittinghomer.gif","pics/bartheal.gif","pics/dyingbart.jpg","pics/atleastyoutried.gif","pics/bartattacksound.wav","pics/bartattacksound.wav","bartattacksound.wav","pics/bartattacksound.wav");
 var Homer= new Character('Homer','super Burp',"pics/homer.png","pics/homer.gif","pics/homechokelisa.gif","pics/homerheal.gif","pics/dyinghomer.jpg","pics/homerwinning.gif");
 
 
