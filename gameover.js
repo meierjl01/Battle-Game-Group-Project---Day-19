@@ -10,7 +10,6 @@ function renderGameOver(name) {
     screenDiv.prepend(header);
     screenDiv.append(gameover);
     screenDiv.append(winner);
-
     setTimeout(function() {
       screenDiv.empty();
       renderHomepage();

@@ -3,8 +3,8 @@ var header = $('header');
 var screenDiv = $('.screen');
 
 function battleRender(character) {
-    character.health = 20;
-    Homer.health = 20;
+    character.health = 3;
+    Homer.health = 3;
     screenDiv.empty();
     screenDiv.css('background-image', 'url(pics/springfield.jpg)');
     //change based on character user selected
@@ -56,9 +56,12 @@ function battleRender(character) {
         }
         if (character.health <= 0) {
             renderGameOver(Homer);
+            Homer.winSound.play();
         }
-        if (Homer.health <= 0) {
+        else if (Homer.health <= 0) {
             renderGameOver(character);
+            character.winSound.play();
+        }
         }
         if (bossHealthMeter.width() > 117.5) {
             bossHealthMeter.css('background', 'green');
