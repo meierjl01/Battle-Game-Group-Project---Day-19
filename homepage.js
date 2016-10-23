@@ -6,7 +6,8 @@ var lisaCharacter=$('<div class="character lisa"><img src="pics/Lisa.png"><p>Lis
 var bartCharacter=$('<div class="character bart"><img src="pics/bart.png"><p>Bart Simpson is a rad dude. He has a ton of friends and is the coolest kid around. Hes got a blackbelt in karate and pranks like no other. This character is a force to be reckoned with.</p></div>');
 var homerCharacter=$('<div class="computer"><img src="pics/homer.png"><p>Homer Simpson is a mean drunk. When not drinking duff beers and eating donuts, you can find him beating up his kids and driving his car drunk into his house.</p></div>');
 var homeSound = new Audio('pics/The Simpsons - Intro.wav');
-var lisaSound = new Audio('pics/Lisa - Dad, hide your shame.wav');
+var lisahomeSound = new Audio('pics/Lets Roll.mp3');
+var barthomeSound = new Audio('pics/bart_laughs.wav');
 
 function renderHomepage(){
 homeSound.play();
@@ -16,10 +17,11 @@ screenDiv.append(title);
 screenDiv.append(lisaCharacter,bartCharacter,homerCharacter);
 //add click handlers to each character
 $('.lisa').on('click',function(e){
-  lisaSound.play();
+  lisahomeSound.play();
  battleRender(Lisa);
 });
 $('.bart').on('click',function(e){
+  barthomeSound.play();
   battleRender(Bart);
 });
   //when character is clicked others fade away and selected grows
