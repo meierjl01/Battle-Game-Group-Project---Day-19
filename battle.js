@@ -42,8 +42,9 @@ function battleRender(character) {
     var characterdiv = $('.characterpic');
     var characterHealthMeter = $('.character-health-meter');
     var bossHealthMeter = $('.boss-health-meter');
-    var homerattackedSound = new Audio('pics/Homer - Scream, crash.wav');
-    var homerDyingSound = new Audio('pics/homerdontfeelsogood.wav');
+    // var homerattackedSound = new Audio('pics/Homer - Scream, crash.wav');
+    // var homerDyingSound = new Audio('pics/homerdontfeelsogood.wav');
+    // var bartattacksound= new Audio('pics/bartattacksound.wav');
 
     function checkHealth() {
         if (character.health <= 5) {
@@ -51,7 +52,6 @@ function battleRender(character) {
 
         }
         if (Homer.health <= 5) {
-            homerdiv.html(dyingHomer);
         }
         if (character.health <= 0) {
             renderGameOver(Homer);
@@ -84,6 +84,7 @@ function battleRender(character) {
     $('.special').on('click', function(e) {
                 //character special attack
                 character.specAttack(Homer);
+                character.specialSound.play();
                 bossHealthMeter.width(11.75 * Homer.health + 'px');
                 bossHealth.text("health: " + Homer.health);
                 VS.hide();
@@ -122,6 +123,7 @@ function battleRender(character) {
                 });
                     });
                 $('.attack').on('click', function(e) {
+                    character.attackSound.play();
                     character.attack(Homer);
                     bossHealth.text("health: " + Homer.health);
                     bossHealthMeter.width(11.75 * Homer.health + 'px');
