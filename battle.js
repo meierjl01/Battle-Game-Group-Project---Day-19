@@ -52,6 +52,7 @@ function battleRender(character) {
 
         }
         if (Homer.health <= 5) {
+          homerdiv.html(dyingHomer);
         }
         if (character.health <= 0) {
             renderGameOver(Homer);
