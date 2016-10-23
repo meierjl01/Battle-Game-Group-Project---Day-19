@@ -1,8 +1,8 @@
 var screenDiv = $('.screen');
-var spiderpig = new Audio('pics/spiderpig.mp3');
+
 
 function renderGameOver(name) {
-    // spiderpig.play();
+
     screenDiv.empty();
     var header = $('<h2 class="game-over-header">' + name.name + ' wins!</h2>');
     var winner = $('<div class ="game-over-gif"><img src ='+ name.winGif +' /></div>');
