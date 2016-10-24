@@ -56,9 +56,11 @@ function battleRender(character) {
         }
         if (character.health <= 0) {
             renderGameOver(Homer);
+            Homer.winSound.play();
         }
-        if (Homer.health <= 0) {
+        else if (Homer.health <= 0) {
             renderGameOver(character);
+            character.winSound.play();
         }
         if (bossHealthMeter.width() > 117.5) {
             bossHealthMeter.css('background', 'green');

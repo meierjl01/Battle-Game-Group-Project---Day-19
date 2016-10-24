@@ -1,4 +1,4 @@
-function Character(name, special, picture, specialGif,attackGif,healGif, dyingPic,winGif,attackSound,specialSound,healSound,winSound){
+function Character(name, special, picture, specialGif,attackGif,healGif, dyingPic,winGif,attackSound,specialSound,healSound,winSound,fatality){
   'use strict';
   this.name=name;
   this.health=20;
@@ -13,6 +13,7 @@ function Character(name, special, picture, specialGif,attackGif,healGif, dyingPi
   this.specialSound= new Audio(specialSound);
   this.healSound= new Audio(healSound);
   this.winSound= new Audio(winSound);
+  this.fatality=fatality;
   // this.injuredSound= new Audio(injuredSound);
 }
 
