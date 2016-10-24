@@ -13,5 +13,5 @@ function renderGameOver(name) {
     setTimeout(function() {
       screenDiv.empty();
       renderHomepage();
-    }, 10000);
+    }, 15000);
 }
