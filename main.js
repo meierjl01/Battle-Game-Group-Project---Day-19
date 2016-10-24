@@ -14,13 +14,12 @@ function Character(name, special, picture, specialGif,attackGif,healGif, dyingPi
   this.healSound= new Audio(healSound);
   this.winSound= new Audio(winSound);
   this.fatality=fatality;
-  // this.injuredSound= new Audio(injuredSound);
 }
 
 
 var Lisa= new Character('Lisa',"Super SAX", "pics/lisa.png","pics/lisasax.gif","pics/lisaduck.gif","pics/lisaheal.gif","pics/dyinglisa.png","pics/lisa.gif",'pics/Slap-SoundMaster13-49669815.mp3',"pics/law_has_spoken.wav", "pics/Lisalaugh.mp3","pics/careless_whispers.mp3","pics/lisafatality.gif");
 var Bart= new Character('Bart', 'super SKATEBOARD','pics/bart.png',"pics/skateboard.gif","pics/barthittinghomer.gif","pics/bartheal.gif","pics/dyingbart.jpg","pics/atleastyoutried.gif",'pics/Slap-SoundMaster13-49669815.mp3',"pics/Homer - Falling scream.wav","pics/Bart - Shut yer yap.wav", "pics/bartwinsound.wav","pics/bartfatality.gif");
-var Homer= new Character('Homer','super Burp',"pics/homer.png","pics/homer.gif","pics/homechokelisa.gif","pics/homerheal.gif","pics/dyinghomer.jpg","pics/homerwinning.gif",'pics/Slap-SoundMaster13-49669815.mp3' ,"pics/homerspecialsound.wav", "pics/Homer - Woohoo! (1).wav", "pics/Homerchampion.wav","pics/homerfatality.gif");
+var Homer= new Character('Homer','super Burp',"pics/homer.png","pics/homer.gif","pics/homerfatality.gif","pics/homerheal.gif","pics/dyinghomer.jpg","pics/homerwinning.gif",'pics/Slap-SoundMaster13-49669815.mp3' ,"pics/homerspecialsound.wav", "pics/Homer - Woohoo! (1).wav", "pics/Homerchampion.wav","pics/homerfatality.gif");
 
 
 
