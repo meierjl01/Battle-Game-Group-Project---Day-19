@@ -179,6 +179,12 @@ h3 {
   background: rgba(0, 0, 0, 0.6);
   margin-top: 4rem; }
 
+.fatality-gif {
+  width: 41rem;
+  height: 29rem;
+  margin-left: 9rem;
+  margin-top: -3rem; }
+
 .game-over-header {
   text-align: center; }
 

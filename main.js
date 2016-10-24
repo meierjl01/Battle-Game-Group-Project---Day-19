@@ -1,4 +1,4 @@
-function Character(name, special, picture, specialGif,attackGif,healGif, dyingPic,winGif,attackSound,specialSound,healSound,winSound){
+function Character(name, special, picture, specialGif,attackGif,healGif, dyingPic,winGif,attackSound,specialSound,healSound,winSound,fatality){
   'use strict';
   this.name=name;
   this.health=20;
@@ -13,13 +13,13 @@ function Character(name, special, picture, specialGif,attackGif,healGif, dyingPi
   this.specialSound= new Audio(specialSound);
   this.healSound= new Audio(healSound);
   this.winSound= new Audio(winSound);
-  // this.injuredSound= new Audio(injuredSound);
+  this.fatality=fatality;
 }
 
 
-var Lisa= new Character('Lisa',"Super SAX", "pics/lisa.png","pics/lisasax.gif","pics/lisaduck.gif","pics/lisaheal.gif","pics/dyinglisa.png","pics/lisa.gif",'pics/Slap-SoundMaster13-49669815.mp3',"pics/law_has_spoken.wav", "pics/Lisalaugh.mp3","pics/careless_whispers.mp3");
-var Bart= new Character('Bart', 'super SKATEBOARD','pics/bart.png',"pics/skateboard.gif","pics/barthittinghomer.gif","pics/bartheal.gif","pics/dyingbart.jpg","pics/atleastyoutried.gif",'pics/Slap-SoundMaster13-49669815.mp3',"pics/Homer - Falling scream.wav","pics/Bart - Shut yer yap.wav", "pics/homerdontfeelsogood.wav");
-var Homer= new Character('Homer','super Burp',"pics/homer.png","pics/homer.gif","pics/homechokelisa.gif","pics/homerheal.gif","pics/dyinghomer.jpg","pics/homerwinning.gif",'pics/Slap-SoundMaster13-49669815.mp3' ,"pics/Homer - Nighty night.wav", "pics/Homer - Woohoo! (1).wav", "pics/Homerchampion.wav");
+var Lisa= new Character('Lisa',"Super SAX", "pics/lisa.png","pics/lisasax.gif","pics/lisaduck.gif","pics/lisaheal.gif","pics/dyinglisa.png","pics/lisa.gif",'pics/Slap-SoundMaster13-49669815.mp3',"pics/law_has_spoken.wav", "pics/Lisalaugh.mp3","pics/careless_whispers.mp3","pics/lisafatality.gif");
+var Bart= new Character('Bart', 'super SKATEBOARD','pics/bart.png',"pics/skateboard.gif","pics/barthittinghomer.gif","pics/bartheal.gif","pics/dyingbart.jpg","pics/atleastyoutried.gif",'pics/Slap-SoundMaster13-49669815.mp3',"pics/Homer - Falling scream.wav","pics/Bart - Shut yer yap.wav", "pics/bartwinsound.wav","pics/bartfatality.gif");
+var Homer= new Character('Homer','super Burp',"pics/homer.png","pics/homer.gif","pics/homerfatality.gif","pics/homerheal.gif","pics/dyinghomer.jpg","pics/homerwinning.gif",'pics/Slap-SoundMaster13-49669815.mp3' ,"pics/homerspecialsound.wav", "pics/Homer - Woohoo! (1).wav", "pics/Homerchampion.wav","pics/homerfatality.gif");
 
 
 
@@ -81,26 +81,3 @@ Character.prototype.heal = function(name) {
  }
 
 };
-
-
-
-
-
-
-
-
-// function hashChangeEvent(e){
-//   var siteLocation=location.hash;
-//
-//   if(siteLocation ===''){
-//     console.log("something");
-//     renderHomePage();
-//   } else if(siteLocation ==='#battle'){
-//     battleRender(character);
-//   }else if(siteLocation ==='#gameover'){
-//     renderGameOver(character);
-//   }
-// }
-//
-// $(window).on('hashchange',hashChangeEvent);
-// hashChangeEvent();
